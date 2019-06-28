@@ -5,8 +5,10 @@ This repo was created so I can learn how to create Puppet Bolt tasks that are im
 
 To experiment with this:
 
-* 1. git clone git@github.com:bobhenkel/k8s.git
-* 2. for every task you want to work on...
-* 3. cd k8s/tasks/src/create_kind_cluster
-* 4. env GOOS=linux GOARCH=amd64 go build -o ../../create_kind_cluster-linux-amd64
-* 5. bolt task run k8s::create_kind_cluster_linux_amd64 cluster_name=kind-cluster2 image="kindest/node:v1.13.7" --nodes localhost --modulepath .
+```
+git clone git@github.com:bobhenkel/k8s.git
+#for every task you want to work on...
+cd k8s/tasks/src/create_kind_cluster
+env GOOS=linux GOARCH=amd64 go build -o ../../create_kind_cluster-linux-amd64
+bolt task run k8s::create_kind_cluster_linux_amd64 cluster_name=kind-cluster2 image="kindest/node:v1.13.7" --nodes localhost --modulepath .
+```
